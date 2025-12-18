@@ -5,6 +5,7 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Link from 'next/link';
 import HomeIcon from '@mui/icons-material/Home';
+import BlockIcon from '@mui/icons-material/Block';
 
 // Define pixels with their display names and image paths
 const PIXELS = [
@@ -163,21 +164,27 @@ export default function WelcomePage() {
               color: 'text.primary',
               fontSize: '1rem',
               lineHeight: 1.6,
-              bgcolor: 'grey.50',
+              bgcolor: 'background.paper',
               p: 3,
               borderRadius: 3,
-              borderLeft: '4px solid',
+              borderLeft: '6px solid',
               borderColor: 'primary.main',
               width: '100%',
+              boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.1)',
             }}
           >
             If everything is working correctly, you should see them on the extension popup UI. 
-            On your existing pages, please refresh so that extension can see/check the event.
+            On your existing pages, please REFRESH so that extension can see/check the event.
             <br />
             <Box component="span" sx={{ color: 'primary.main', fontWeight: 700, mt: 1, display: 'inline-block' }}>
               <Typography variant="subtitle1" component="span" sx={{ color: 'primary.main', fontWeight: 700 }}>
                 Happy debugging.
               </Typography>
+            </Box>
+            <br />
+            <Box component="span" sx={{ fontWeight: 600, mt: 2, display: 'flex', alignItems: 'center' }}>
+              <BlockIcon sx={{ color: 'error.main', mr: 1, fontSize: '1.2rem' }} />
+              <Typography variant="caption" component="span" sx={{ color: 'text.secondary' }}>Note: If you have <Typography component="span" sx={{ color: 'error.main' }}>ad blocker</Typography> enabled, you may need to disable it temporarily for the extension to function properly.</Typography>
             </Box>
           </Typography>
         </Box>
