@@ -17,7 +17,7 @@
     "@mui/material": "latest",
     "@mui/material-nextjs": "latest",
     "mixpanel-browser": "^2.72.0",
-    "next": "^15.0.0",
+    "next": "16.1.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
@@ -26,7 +26,7 @@
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
     "eslint": "latest",
-    "eslint-config-next": "^15.0.0",
+    "eslint-config-next": "^16.0.0",
     "typescript": "latest"
   }
 }
