@@ -154,6 +154,34 @@ export default function Hero() {
                 </Link> */}
               </Box>
 
+              {/* Social Proof */}
+              <Box sx={{ mt: 4, display: 'flex', flexDirection: 'column', gap: 1.5 }}>
+                <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                  <Typography variant="body2" sx={{ color: 'warning.main', fontSize: '1rem', letterSpacing: 2 }}>
+                    ★★★★★
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary" sx={{ fontWeight: 500 }}>
+                    5.0 · 500+ installs on Chrome Web Store
+                  </Typography>
+                </Box>
+                <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
+                  <Typography
+                    variant="body2"
+                    color="text.secondary"
+                    sx={{ fontStyle: 'italic', borderLeft: '3px solid', borderColor: 'primary.main', pl: 1.5, py: 0.5 }}
+                  >
+                    &ldquo;Absolutely top tier! I&apos;ve been looking for an extension like this for so long.&rdquo; — Jared S***
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    color="text.secondary"
+                    sx={{ fontStyle: 'italic', borderLeft: '3px solid', borderColor: 'primary.main', pl: 1.5, py: 0.5 }}
+                  >
+                    &ldquo;Great tool if you manage GTM/GA4 implementations.&rdquo; — Pete L***
+                  </Typography>
+                </Box>
+              </Box>
+
               {/* Browser Compatibility */}
             {/*   <Box sx={{ mt: 4, display: 'flex', gap: 2, flexWrap: 'wrap' }}>
                 <Box sx={{ 

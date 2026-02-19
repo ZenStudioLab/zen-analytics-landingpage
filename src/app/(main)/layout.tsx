@@ -10,7 +10,7 @@ export default function RootLayout(props: { children: React.ReactNode }) {
     <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="canonical" href="https://zap-pixel.web.app/" />        
+        <link rel="canonical" href="https://zenanalytics.online" />        
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <meta name="google-site-verification" content="LC-sGMf03ki4dfJ9JKdOuSSuYJp-6lxy91Y-t9eMlLE" />
         <link rel="icon" href="/images/128.svg" />
