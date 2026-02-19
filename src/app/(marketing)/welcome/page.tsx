@@ -1,3 +1,5 @@
+'use client';
+
 import * as React from 'react';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
@@ -24,37 +26,37 @@ export default function WelcomePage() {
   return (
     <Container maxWidth="xl" sx={{ py: { xs: 4, md: 4 }, position: 'relative' }}>
       <Box sx={{ position: 'absolute', top: 20, left: 20, display: { xs: 'none', md: 'block' } }}>
-        <Button 
-            component={Link} 
-            href="/" 
-            startIcon={<HomeIcon />}
-            variant="text"
-            color="primary"
-            sx={{ fontWeight: 600 }}
+        <Button
+          component={Link}
+          href="/"
+          startIcon={<HomeIcon />}
+          variant="text"
+          color="primary"
+          sx={{ fontWeight: 600 }}
         >
-            Home
+          Home
         </Button>
       </Box>
       <Box sx={{ display: { xs: 'flex', md: 'none' }, mb: 2, justifyContent: 'center' }}>
-        <Button 
-            component={Link} 
-            href="/" 
-            startIcon={<HomeIcon />}
-            variant="text"
-            color="primary"
-            sx={{ fontWeight: 600 }}
+        <Button
+          component={Link}
+          href="/"
+          startIcon={<HomeIcon />}
+          variant="text"
+          color="primary"
+          sx={{ fontWeight: 600 }}
         >
-            Home
+          Home
         </Button>
       </Box>
 
       {/* Centered Title */}
-      <Typography 
-        variant="h3" 
-        component="h1" 
-        gutterBottom 
-        sx={{ 
-          fontWeight: 700, 
+      <Typography
+        variant="h3"
+        component="h1"
+        gutterBottom
+        sx={{
+          fontWeight: 700,
           color: 'text.primary',
           mb: 1,
           lineHeight: 1.2,
@@ -64,13 +66,13 @@ export default function WelcomePage() {
       >
         Welcome to Zen Analytics Pixel Helper
       </Typography>
-      
+
       {/* Subtitle */}
-      <Typography 
-        variant="subtitle1" 
-        component="p" 
-        sx={{ 
-          color: 'text.secondary', 
+      <Typography
+        variant="subtitle1"
+        component="p"
+        sx={{
+          color: 'text.secondary',
           fontWeight: 500,
           fontSize: '1.2rem',
           textAlign: 'center',
@@ -83,10 +85,10 @@ export default function WelcomePage() {
       <Box
         sx={{
           display: 'flex',
-          flexDirection: { xs: 'column', md: 'row' }, 
+          flexDirection: { xs: 'column', md: 'row' },
           alignItems: 'center',
           justifyContent: 'center',
-          gap: { xs: 4, md: 6 }, 
+          gap: { xs: 4, md: 6 },
           mt: { xs: 4, md: 6 },
           height: '100%',
         }}
@@ -102,65 +104,65 @@ export default function WelcomePage() {
           }}
         >
           {/* Intro Message */}
-          <Typography 
-            variant="h6" 
-            component="p" 
-            sx={{ 
-              mb: 2, 
-              color: 'text.secondary', 
+          <Typography
+            variant="h6"
+            component="p"
+            sx={{
+              mb: 2,
+              color: 'text.secondary',
               fontWeight: 400,
               fontSize: '1rem',
               lineHeight: 1.6,
             }}
           >
-              The welcome page has installed several pixel trackers:
+            The welcome page has installed several pixel trackers:
           </Typography>
 
           {/* List of installed pixels */}
-          <Box sx={{ 
-            display: 'flex', 
-            flexWrap: 'wrap', 
-            justifyContent: { xs: 'center', md: 'flex-start' }, 
-            gap: 1.5, 
+          <Box sx={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            justifyContent: { xs: 'center', md: 'flex-start' },
+            gap: 1.5,
             mb: 3,
           }}>
             {PIXELS.map((pixel) => (
-                <Box key={pixel.name} sx={{ 
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: 1,
-                    px: 2, 
-                    py: 1, 
-                    bgcolor: 'background.paper', 
-                    borderRadius: 2, 
-                    color: 'text.primary',
-                    border: '1px solid',
-                    borderColor: 'grey.200',
-                    fontWeight: 600,
-                    fontSize: '0.85rem',
-                    boxShadow: '0px 2px 4px rgba(0,0,0,0.04)',
-                    transition: 'all 0.2s ease-in-out',
-                    '&:hover': {
-                      transform: 'translateY(-2px)',
-                      boxShadow: '0px 4px 8px rgba(0,0,0,0.08)',
-                      borderColor: 'primary.main',
-                    }
-                }}>
-                    <Box 
-                      component="img" 
-                      src={pixel.image} 
-                      alt={pixel.name}
-                      sx={{ width: 20, height: 20, objectFit: 'contain' }}
-                    />
-                    {pixel.name}
-                </Box>
+              <Box key={pixel.name} sx={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: 1,
+                px: 2,
+                py: 1,
+                bgcolor: 'background.paper',
+                borderRadius: 2,
+                color: 'text.primary',
+                border: '1px solid',
+                borderColor: 'grey.200',
+                fontWeight: 600,
+                fontSize: '0.85rem',
+                boxShadow: '0px 2px 4px rgba(0,0,0,0.04)',
+                transition: 'all 0.2s ease-in-out',
+                '&:hover': {
+                  transform: 'translateY(-2px)',
+                  boxShadow: '0px 4px 8px rgba(0,0,0,0.08)',
+                  borderColor: 'primary.main',
+                }
+              }}>
+                <Box
+                  component="img"
+                  src={pixel.image}
+                  alt={pixel.name}
+                  sx={{ width: 20, height: 20, objectFit: 'contain' }}
+                />
+                {pixel.name}
+              </Box>
             ))}
           </Box>
 
           {/* Footer Message */}
-          <Typography 
-            variant="body1" 
-            sx={{ 
+          <Typography
+            variant="body1"
+            sx={{
               color: 'text.primary',
               fontSize: '1rem',
               lineHeight: 1.6,
@@ -173,7 +175,7 @@ export default function WelcomePage() {
               boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.1)',
             }}
           >
-            If everything is working correctly, you should see them on the extension popup UI. 
+            If everything is working correctly, you should see them on the extension popup UI.
             On your existing pages, please REFRESH so that extension can see/check the event.
             <br />
             <Box component="span" sx={{ color: 'primary.main', fontWeight: 700, mt: 1, display: 'inline-block' }}>
@@ -208,12 +210,12 @@ export default function WelcomePage() {
             playsInline
             sx={{
               width: '100%',
-              maxWidth: '800px', 
+              maxWidth: '800px',
               maxHeight: '100%',
               borderRadius: 4,
-              boxShadow: '0px 20px 40px rgba(0, 0, 0, 0.1)', 
+              boxShadow: '0px 20px 40px rgba(0, 0, 0, 0.1)',
               backgroundColor: '#000',
-              objectFit: 'contain', 
+              objectFit: 'contain',
             }}
           />
         </Box>
