@@ -1,3 +1,5 @@
+'use client';
+
 import * as React from 'react';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
@@ -20,40 +22,40 @@ export default function PrivacyPolicy() {
         <Typography variant="h4" component="h1" sx={{ mb: 4, fontWeight: 'bold' }}>
           Privacy Policy
         </Typography>
-        
+
         <Paper sx={{ p: 4, mb: 4 }}>
           <Typography variant="subtitle1" sx={{ mb: 3, fontStyle: 'italic' }}>
             Last updated: April 28, 2025
           </Typography>
-          
+
           <Typography paragraph>
             This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.
           </Typography>
-          
+
           <Typography paragraph>
             We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy.
           </Typography>
-          
+
           <Divider sx={{ my: 3 }} />
-          
+
           <Typography variant="h6" component="h2" sx={{ mb: 2, fontWeight: 'bold' }}>
             INTERPRETATION AND DEFINITIONS
           </Typography>
-          
+
           <Typography variant="subtitle1" sx={{ mb: 2, fontWeight: 'bold' }}>
             Interpretation
           </Typography>
           <Typography paragraph>
             The words of which the initial letter is capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.
           </Typography>
-          
+
           <Typography variant="subtitle1" sx={{ mb: 2, fontWeight: 'bold' }}>
             Definitions
           </Typography>
           <Typography paragraph>
             For the purposes of this Privacy Policy:
           </Typography>
-          
+
           <Typography component="ul" sx={{ pl: 4 }}>
             <li>
               <Typography paragraph>
@@ -111,24 +113,24 @@ export default function PrivacyPolicy() {
               </Typography>
             </li>
           </Typography>
-          
+
           <Divider sx={{ my: 3 }} />
-          
+
           <Typography variant="h6" component="h2" sx={{ mb: 2, fontWeight: 'bold' }}>
             COLLECTING AND USING YOUR PERSONAL DATA
           </Typography>
-          
+
           <Typography variant="subtitle1" sx={{ mb: 2, fontWeight: 'bold' }}>
             Types of Data Collected
           </Typography>
-          
+
           <Typography variant="subtitle2" sx={{ mb: 1, fontWeight: 'bold' }}>
             Personal Data
           </Typography>
           <Typography paragraph>
             While using Our Service, We may ask You to provide Us with certain personally identifiable information that can be used to contact or identify You.
           </Typography>
-          
+
           <Typography variant="subtitle2" sx={{ mb: 1, fontWeight: 'bold' }}>
             Usage Data
           </Typography>
@@ -145,7 +147,7 @@ export default function PrivacyPolicy() {
           <Typography paragraph>
             To provide and improve our Service, we specifically collect the following types of data using Mixpanel:
           </Typography>
-          
+
           <Typography variant="subtitle2" sx={{ mb: 1, fontWeight: 'bold' }}>
             1. Location Information
           </Typography>
@@ -172,14 +174,14 @@ export default function PrivacyPolicy() {
             <li><Typography variant="body1">Scroll behavior</Typography></li>
             <li><Typography variant="body1">Keystroke logging</Typography></li>
           </Typography>
-          
+
           <Typography variant="subtitle1" sx={{ mb: 2, fontWeight: 'bold' }}>
             Use of Your Personal Data
           </Typography>
           <Typography paragraph>
             The Company may use Personal Data for the following purposes:
           </Typography>
-          
+
           <Typography component="ul" sx={{ pl: 4 }}>
             <li>
               <Typography paragraph>
@@ -222,11 +224,11 @@ export default function PrivacyPolicy() {
               </Typography>
             </li>
           </Typography>
-          
+
           <Typography paragraph>
             We may share Your personal information in the following situations:
           </Typography>
-          
+
           <Typography component="ul" sx={{ pl: 4 }}>
             <li>
               <Typography paragraph>
@@ -259,9 +261,9 @@ export default function PrivacyPolicy() {
               </Typography>
             </li>
           </Typography>
-          
+
           <Divider sx={{ my: 3 }} />
-          
+
           <Typography variant="h6" component="h2" sx={{ mb: 2, fontWeight: 'bold' }}>
             RETENTION OF YOUR PERSONAL DATA
           </Typography>
@@ -271,9 +273,9 @@ export default function PrivacyPolicy() {
           <Typography paragraph>
             The Company will also retain Usage Data for internal analysis purposes. Usage Data is generally retained for a shorter period of time, except when this data is used to strengthen the security or to improve the functionality of Our Service, or We are legally obligated to retain this data for longer time periods.
           </Typography>
-          
+
           <Divider sx={{ my: 3 }} />
-          
+
           <Typography variant="h6" component="h2" sx={{ mb: 2, fontWeight: 'bold' }}>
             TRANSFER OF YOUR PERSONAL DATA
           </Typography>
@@ -286,9 +288,9 @@ export default function PrivacyPolicy() {
           <Typography paragraph>
             The Company will take all steps reasonably necessary to ensure that Your data is treated securely and in accordance with this Privacy Policy and no transfer of Your Personal Data will take place to an organization or a country unless there are adequate controls in place including the security of Your data and other personal information.
           </Typography>
-          
+
           <Divider sx={{ my: 3 }} />
-          
+
           <Typography variant="h6" component="h2" sx={{ mb: 2, fontWeight: 'bold' }}>
             DELETE YOUR PERSONAL DATA
           </Typography>
@@ -304,34 +306,34 @@ export default function PrivacyPolicy() {
           <Typography paragraph>
             Please note, however, that We may need to retain certain information when we have a legal obligation or lawful basis to do so.
           </Typography>
-          
+
           <Divider sx={{ my: 3 }} />
-          
+
           <Typography variant="h6" component="h2" sx={{ mb: 2, fontWeight: 'bold' }}>
             DISCLOSURE OF YOUR PERSONAL DATA
           </Typography>
-          
+
           <Typography variant="subtitle1" sx={{ mb: 2, fontWeight: 'bold' }}>
             Business Transactions
           </Typography>
           <Typography paragraph>
             If the Company is involved in a merger, acquisition or asset sale, Your Personal Data may be transferred. We will provide notice before Your Personal Data is transferred and becomes subject to a different Privacy Policy.
           </Typography>
-          
+
           <Typography variant="subtitle1" sx={{ mb: 2, fontWeight: 'bold' }}>
             Law enforcement
           </Typography>
           <Typography paragraph>
             Under certain circumstances, the Company may be required to disclose Your Personal Data if required to do so by law or in response to valid requests by public authorities (e.g. a court or a government agency).
           </Typography>
-          
+
           <Typography variant="subtitle1" sx={{ mb: 2, fontWeight: 'bold' }}>
             Other legal requirements
           </Typography>
           <Typography paragraph>
             The Company may disclose Your Personal Data in the good faith belief that such action is necessary to:
           </Typography>
-          
+
           <Typography component="ul" sx={{ pl: 4 }}>
             <li>
               <Typography paragraph>
@@ -359,27 +361,27 @@ export default function PrivacyPolicy() {
               </Typography>
             </li>
           </Typography>
-          
+
           <Divider sx={{ my: 3 }} />
-          
+
           <Typography variant="h6" component="h2" sx={{ mb: 2, fontWeight: 'bold' }}>
             SECURITY OF YOUR PERSONAL DATA
           </Typography>
           <Typography paragraph>
             The security of Your Personal Data is important to Us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. While We strive to use commercially acceptable means to protect Your Personal Data, We cannot guarantee its absolute security.
           </Typography>
-          
+
           <Divider sx={{ my: 3 }} />
-          
+
           <Typography variant="h6" component="h2" sx={{ mb: 2, fontWeight: 'bold' }}>
             CHILDREN'S PRIVACY
           </Typography>
           <Typography paragraph>
             Our Service does not address anyone under the age of 13. We do not knowingly collect personally identifiable information from anyone under the age of 13. If You are a parent or guardian and You are aware that Your child has provided Us with Personal Data, please contact Us. If We become aware that We have collected Personal Data from anyone under the age of 13 without verification of parental consent, We take steps to remove that information from Our servers.
           </Typography>
-          
+
           <Divider sx={{ my: 3 }} />
-          
+
           <Typography variant="h6" component="h2" sx={{ mb: 2, fontWeight: 'bold' }}>
             LINKS TO OTHER WEBSITES
           </Typography>
@@ -389,9 +391,9 @@ export default function PrivacyPolicy() {
           <Typography paragraph>
             We have no control over and assume no responsibility for the content, privacy policies or practices of any third party sites or services.
           </Typography>
-          
+
           <Divider sx={{ my: 3 }} />
-          
+
           <Typography variant="h6" component="h2" sx={{ mb: 2, fontWeight: 'bold' }}>
             CHANGES TO THIS PRIVACY POLICY
           </Typography>
@@ -404,9 +406,9 @@ export default function PrivacyPolicy() {
           <Typography paragraph>
             You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.
           </Typography>
-          
+
           <Divider sx={{ my: 3 }} />
-          
+
           <Typography variant="h6" component="h2" sx={{ mb: 2, fontWeight: 'bold' }}>
             CONTACT US
           </Typography>
@@ -421,13 +423,13 @@ export default function PrivacyPolicy() {
             </li>
           </Typography>
         </Paper>
-        
+
         <Box sx={{ display: 'flex', justifyContent: 'center', mt: 2 }}>
           <Button variant="contained" component={NextLink} href="/" sx={{ mr: 2 }}>
             Back to Home
           </Button>
         </Box>
-        
+
         <Box sx={{ mt: 6 }}>
           <Copyright />
         </Box>
