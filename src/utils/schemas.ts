@@ -10,7 +10,7 @@ export const softwareApplicationSchema = {
   "alternateName": "Zen Analytics — Unified Analytics & Ad Tracker Inspector",
   "applicationCategory": "DeveloperApplication",
   "applicationSubCategory": "Browser Extension",
-  "operatingSystem": "Chrome, Edge, Brave, Vivaldi",
+  "operatingSystem": "Chrome, Edge, Vivaldi",
   "description": "Simultaneously monitor, debug, and validate pixel tracking for Google Analytics 4, Google Tag Manager, Meta Ads, TikTok Ads, and 25+ other platforms — all in one browser extension. Supports DevTools panel, SidePanel, in-page live tracking, session recording, and Google Consent Mode inspection.",
   "offers": {
     "@type": "Offer",
@@ -22,7 +22,6 @@ export const softwareApplicationSchema = {
     "@type": "AggregateRating",
     "ratingValue": "5",
     "bestRating": "5",
-    "worstRating": "1",
     "ratingCount": "5",
     "reviewCount": "2"
   },
