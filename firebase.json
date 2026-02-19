@@ -1,33 +1,22 @@
 {
   "hosting": {
-    "source": ".",
+    "public": "public",
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
     ],
-    "headers": [
+    "redirects": [
       {
-        "source": "**/*.@(jpg|jpeg|gif|png|svg|webp|mp4|webm)",
-        "headers": [
-          {
-            "key": "Cache-Control",
-            "value": "public, max-age=31536000, immutable"
-          }
-        ]
+        "source": "/",
+        "destination": "https://zenanalytics.online",
+        "type": 301
       },
       {
-        "source": "**/*.@(js|css|woff2)",
-        "headers": [
-          {
-            "key": "Cache-Control",
-            "value": "public, max-age=31536000, immutable"
-          }
-        ]
+        "source": "/:path*",
+        "destination": "https://zenanalytics.online/:path*",
+        "type": 301
       }
-    ],
-    "frameworksBackend": {
-      "region": "us-central1"
-    }
+    ]
   }
 }
