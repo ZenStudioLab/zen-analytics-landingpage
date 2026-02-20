@@ -18,14 +18,16 @@ const VideoPlayer = dynamic(() => import('@/components/VideoPlayer'), {
 
 export default function Hero() {
   const theme = useTheme();
-  
+
   return (
     <Box
       sx={{
         bgcolor: 'background.paper',
-        pt: { xs: 6, md: 10 },
-        pb: { xs: 6, md: 8 },
-        mt: 5,
+        minHeight: { xs: 'auto', md: '100vh' },
+        display: 'flex',
+        alignItems: 'center',
+        pt: { xs: 12, md: 0 },
+        pb: { xs: 8, md: 4 },
         position: 'relative',
         overflow: 'hidden'
       }}
@@ -45,7 +47,7 @@ export default function Hero() {
           opacity: 0.8
         }}
       />
-      
+
       <Box
         sx={{
           position: 'absolute',
@@ -60,14 +62,14 @@ export default function Hero() {
           opacity: 0.7
         }}
       />
-      
+
       <Container maxWidth="xl" sx={{ position: 'relative', zIndex: 1 }}>
-        <Box sx={{ 
-          display: 'flex', 
-          flexDirection: { xs: 'column', md: 'row' }, 
-          gap: 6, 
+        <Box sx={{
+          display: 'flex',
+          flexDirection: { xs: 'column', md: 'row' },
+          gap: 6,
           alignItems: 'center',
-          justifyContent: 'space-between' 
+          justifyContent: 'space-between'
         }}>
           <Fade in={true} timeout={1000}>
             <Box sx={{ flex: 1, maxWidth: { md: '55%' }, mt: -9 }}>
@@ -76,17 +78,17 @@ export default function Hero() {
                 variant="h2"
                 color="text.primary"
                 gutterBottom
-                sx={{ 
+                sx={{
                   fontWeight: 700,
                   fontSize: { xs: '2.5rem', md: '3.5rem' },
                   lineHeight: 1.2
                 }}
               >
                 All-in-one analytics tool
-                <Box 
-                  component="span" 
-                  sx={{ 
-                    color: 'primary.main', 
+                <Box
+                  component="span"
+                  sx={{
+                    color: 'primary.main',
                     display: 'block',
                     position: 'relative'
                   }}
@@ -94,26 +96,26 @@ export default function Hero() {
                   Zen Analytics Pixel Tracker
                 </Box>
               </Typography>
-              <Typography 
-                variant="h5" 
-                color="text.secondary" 
+              <Typography
+                variant="h5"
+                color="text.secondary"
                 paragraph
-                sx={{ 
+                sx={{
                   fontSize: { xs: '1.1rem', md: '1.25rem' },
                   lineHeight: 1.6,
                   mt: 2,
                   opacity: 0.9
                 }}
               >
-                Monitor 20+ analytics (Google Analytics, Google Tag Manager, Facebook (Meta), Microsoft (Bing), Tiktok). View events, capture sessions & export findings via popup, sidepanel, devtool panel or in-page view.                       
+                Monitor 20+ analytics (Google Analytics, Google Tag Manager, Facebook (Meta), Microsoft (Bing), Tiktok). View events, capture sessions & export findings via popup, sidepanel, devtool panel or in-page view.
               </Typography>
               <Box sx={{ mt: 5, display: 'flex', flexDirection: { xs: 'column', sm: 'row' }, alignItems: { xs: 'flex-start', sm: 'center' }, gap: 2 }}>
                 <Button
                   variant="contained"
                   size="large"
-                  sx={{ 
-                    px: 4, 
-                    py: 1.5, 
+                  sx={{
+                    px: 4,
+                    py: 1.5,
                     fontWeight: 600,
                     borderRadius: '28px',
                     backgroundColor: '#F37022',
@@ -135,7 +137,7 @@ export default function Hero() {
                 >
                   Install Now
                 </Button>
-{/*                 <Link 
+                {/*                 <Link 
                   href="#how-it-works" 
                   underline="none"
                   sx={{ 
@@ -183,7 +185,7 @@ export default function Hero() {
               </Box>
 
               {/* Browser Compatibility */}
-            {/*   <Box sx={{ mt: 4, display: 'flex', gap: 2, flexWrap: 'wrap' }}>
+              {/*   <Box sx={{ mt: 4, display: 'flex', gap: 2, flexWrap: 'wrap' }}>
                 <Box sx={{ 
                   display: 'flex', 
                   alignItems: 'center', 
@@ -247,16 +249,16 @@ export default function Hero() {
               </Box> */}
             </Box>
           </Fade>
-          
+
           <Fade in={true} timeout={1500}>
-            <Box 
-              sx={{ 
+            <Box
+              sx={{
                 flex: 1,
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
                 width: '100%',
-                maxWidth: '550px',                
+                maxWidth: '550px',
                 overflow: 'hidden',
                 position: 'relative',
                 top: -30,
