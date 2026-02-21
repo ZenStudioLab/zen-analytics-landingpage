@@ -2,5 +2,6 @@
     "$schema": "https://openapi.vercel.sh/vercel.json",
     "buildCommand": "cd .. && npx turbo build --filter=zen-analytics-landing-page",
     "installCommand": "cd .. && yarn install",
-    "framework": "nextjs"
+    "framework": "nextjs",
+    "cleanUrls": true
 }
