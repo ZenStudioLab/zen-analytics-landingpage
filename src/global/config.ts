@@ -1,4 +1,4 @@
-import { AnalyticsProvider } from "./constants";
+import { AnalyticsProvider } from "@zen-analytics/constants";
 
 export const AnalyticsProviderConfig = {
     [AnalyticsProvider.GTM]: {

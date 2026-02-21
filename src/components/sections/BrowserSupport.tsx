@@ -5,16 +5,16 @@ import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
-import Button from '@mui/material/Button';
+import { Button } from '@zen-analytics/ui';
 import { styled } from '@mui/material/styles';
 import Link from '@mui/material/Link';
 import { addUtmParams } from '@/global/utils';
-import { EXTENSION_URLS } from '@/global/constants';
+import { EXTENSION_URLS } from '@zen-analytics/constants';
 
 // Browser info type
 interface BrowserInfo {
   link?: string;
-  attributionUrl?: string; 
+  attributionUrl?: string;
   name: string;
   logo: string;
   installText: string;
@@ -40,13 +40,13 @@ const BrowserCard = styled(Paper)(({ theme }) => ({
 
 // Browser icon placeholder
 const BrowserIcon = ({ name, logo, attributionUrl }: { name: string; logo: string; attributionUrl?: string }) => {
-  const IconWrapper = attributionUrl ? 
+  const IconWrapper = attributionUrl ?
     ({ children }: { children: React.ReactNode }) => (
-      <Link 
-        href={attributionUrl} 
-        target="_blank" 
+      <Link
+        href={attributionUrl}
+        target="_blank"
         rel="noopener noreferrer"
-        sx={{ 
+        sx={{
           cursor: 'pointer',
           display: 'block',
           '&:hover': {
@@ -59,7 +59,7 @@ const BrowserIcon = ({ name, logo, attributionUrl }: { name: string; logo: strin
       >
         {children}
       </Link>
-    ) : 
+    ) :
     ({ children }: { children: React.ReactNode }) => <>{children}</>;
 
   return (
@@ -118,7 +118,7 @@ export default function BrowserSupport() {
     },
     {
       name: 'Brave',
-      logo: '/images/browsers/webp/brave.webp',            
+      logo: '/images/browsers/webp/brave.webp',
       link: '<a target="_blank" href="https://icons8.com/icon/ZAPJV5FAO4PW/brave-web-browser">Brave</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>',
       attributionUrl: 'https://icons8.com/icon/ZAPJV5FAO4PW/brave-web-browser',
       installText: 'Add To Brave',
@@ -150,46 +150,46 @@ export default function BrowserSupport() {
           </Typography>
         </Box>
 
-        <Box 
-          sx={{ 
-            display: 'flex', 
-            flexWrap: 'wrap', 
-            gap: 4, 
+        <Box
+          sx={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            gap: 4,
             justifyContent: 'center'
           }}
         >
           {browsers.map((browser) => (
-            <Box 
-              key={browser.name} 
-              sx={{ 
-                flexBasis: { 
-                  xs: '100%', 
-                  sm: 'calc(50% - 32px)', 
-                  md: 'calc(20% - 32px)' 
+            <Box
+              key={browser.name}
+              sx={{
+                flexBasis: {
+                  xs: '100%',
+                  sm: 'calc(50% - 32px)',
+                  md: 'calc(20% - 32px)'
                 }
               }}
             >
               <BrowserCard elevation={1}>
-                <BrowserIcon 
-                  name={browser.name} 
-                  logo={browser.logo} 
+                <BrowserIcon
+                  name={browser.name}
+                  logo={browser.logo}
                   attributionUrl={browser.attributionUrl}
                 />
-                
+
                 <Typography variant="h6" component="h3" gutterBottom>
                   {browser.name}
                 </Typography>
-                
+
                 <Typography variant="body2" color="text.secondary" sx={{ mb: 3, flexGrow: 1 }}>
                   {`The best Zen Analytics experience on ${browser.name}.`}
                 </Typography>
-                
+
                 <Button
                   variant="contained"
                   color="primary"
                   href={browser.installLink !== '#' ? browser.installLink : undefined}
                   disabled={browser.installLink === '#'}
-                  sx={{ 
+                  sx={{
                     textTransform: 'none',
                     borderRadius: 5,
                     px: 3

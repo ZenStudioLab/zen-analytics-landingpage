@@ -11,7 +11,7 @@ import TiktokPixel from '@/components/tracker-network/Tiktok';
 import Taboola from '@/components/tracker-network/Taboola';
 import GTM, { GTMBody } from '@/components/tracker-network/GTM';
 import { AnalyticsProviderConfig } from '@/global/config';
-import { AnalyticsProvider } from '@/global/constants';
+import { AnalyticsProvider } from '@zen-analytics/constants';
 import GA4 from '@/components/tracker-network/GA4';
 import Microsoft from '@/components/tracker-network/Microsoft';
 import Appsflyer from '@/components/tracker-network/Appsflyer';

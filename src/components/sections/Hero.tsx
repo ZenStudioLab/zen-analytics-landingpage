@@ -3,11 +3,11 @@
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
+import { Button } from '@zen-analytics/ui';
 import { useTheme } from '@mui/material/styles';
 import { Fade } from '@mui/material';
 import { addUtmParams } from '@/global/utils';
-import { EXTENSION_URLS } from '@/global/constants';
+import { EXTENSION_URLS } from '@zen-analytics/constants';
 import dynamic from 'next/dynamic';
 
 // Dynamically import the VideoPlayer component

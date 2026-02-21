@@ -5,7 +5,7 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
+import { Button } from '@zen-analytics/ui';
 import Container from '@mui/material/Container';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -16,12 +16,12 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import Link from 'next/link';
 import { Fade, useScrollTrigger } from '@mui/material';
 import { addUtmParams } from '@/global/utils';
-import { EXTENSION_URLS } from '@/global/constants';
+import { EXTENSION_URLS } from '@zen-analytics/constants';
 
 const navItems = [
   { name: 'Features', href: '/#features' },
   { name: 'Download', href: '/#browsers' },
-  { name: 'About', href: '/about' },  
+  { name: 'About', href: '/about' },
   { name: 'FAQ', href: '/#faq' }
 ];
 
@@ -49,7 +49,7 @@ function ElevationScroll(props: ElevationScrollProps) {
 export default function Header() {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
-  
+
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
@@ -69,10 +69,10 @@ export default function Header() {
             <Typography
               variant="h6"
               component="div"
-              sx={{ 
-                flexGrow: { xs: 1, md: 0 }, 
-                mr: 4, 
-                fontWeight: 700, 
+              sx={{
+                flexGrow: { xs: 1, md: 0 },
+                mr: 4,
+                fontWeight: 700,
                 color: 'primary.main',
                 display: 'flex',
                 alignItems: 'center',
@@ -80,18 +80,18 @@ export default function Header() {
                 letterSpacing: '-0.5px',
               }}
             >
-              <Box 
-                component="img" 
-                src="/images/128.svg" 
+              <Box
+                component="img"
+                src="/images/128.svg"
                 alt="Zen Analytics Logo"
-                sx={{ 
-                  height: 40, 
-                  mr: 1.5, 
+                sx={{
+                  height: 40,
+                  mr: 1.5,
                   display: { xs: 'none', md: 'flex' },
                   transition: 'transform 0.3s ease',
                   '&:hover': {
                     transform: 'rotate(5deg) scale(1.1)'
-                  } 
+                  }
                 }}
               />
               Zen Analytics
@@ -139,15 +139,15 @@ export default function Header() {
                   }}
                 >
                   {navItems.map((item) => (
-                    <MenuItem 
-                      key={item.name} 
+                    <MenuItem
+                      key={item.name}
                       onClick={handleCloseNavMenu}
-                      sx={{ 
+                      sx={{
                         py: 1.5,
                         px: 3,
                         '&:hover': {
                           backgroundColor: 'rgba(76, 175, 80, 0.08)'
-                        } 
+                        }
                       }}
                     >
                       <Link href={item.href} passHref style={{ textDecoration: 'none', color: 'inherit', width: '100%' }}>
@@ -166,8 +166,8 @@ export default function Header() {
                   key={item.name}
                   component={Link}
                   href={item.href}
-                  sx={{ 
-                    mx: 1.5, 
+                  sx={{
+                    mx: 1.5,
                     color: 'text.primary',
                     fontSize: '0.95rem',
                     fontWeight: 500,
@@ -203,10 +203,10 @@ export default function Header() {
             </Box>
 
             {/* Action buttons */}
-            <Box sx={{ display: 'flex', alignItems: 'center' }}>            
+            <Box sx={{ display: 'flex', alignItems: 'center' }}>
               <Fade in={true} timeout={1000}>
-                <Button 
-                  variant="contained" 
+                <Button
+                  variant="contained"
                   color="primary"
                   href={addUtmParams(EXTENSION_URLS.CHROME, {
                     source: 'zen_analytics_landing_page',
@@ -215,7 +215,7 @@ export default function Header() {
                   })}
                   target="_blank"
                   rel="noopener noreferrer"
-                  sx={{ 
+                  sx={{
                     display: { xs: 'none', md: 'flex' },
                     ml: 2,
                     fontWeight: 600,

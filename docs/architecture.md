@@ -6,6 +6,12 @@ This document describes the architectural design of the Zen Analytics Landing Pa
 ## System Overview
 Zen Analytics is a browser extension built with WXT that analyzes web analytics data across 25+ networks. This project is its landing page.
 
+## Shared Packages
+The project utilizes shared internal packages to ensure consistency and enable code reuse across the monorepo:
+- **`@zen-analytics/constants`**: Shared runtime constants and enums (e.g., `AnalyticsNetwork`, `StorageKey`).
+- **`@zen-analytics/types`**: Shared TypeScript interfaces and type definitions (e.g., `OptionState`, `PixelState`).
+- **`@zen-analytics/ui`**: Shared UI components and theme configurations.
+
 ## Core Components
 
 ### Landing Page Components
@@ -32,24 +38,35 @@ Zen Analytics is a browser extension built with WXT that analyzes web analytics 
 
 ## Directory Structure
 ```
-src/
-├── app/                       # Next.js app directory
-│   ├── page.tsx               # Main landing page
-│   ├── layout.tsx             # Root layout component
-│   └── about/                 # About page 
-├── components/                # Reusable UI components
-│   ├── layout/                # Layout components 
-│   │   ├── Header.tsx         # Site header with navigation
-│   │   └── Footer.tsx         # Site footer
-│   ├── sections/              # Major page sections
-│   │   ├── Hero.tsx           # Hero banner section
-│   │   ├── Features.tsx       # Features highlight section
-│   │   ├── BrowserSupport.tsx # Browser compatibility section
-│   │   ├── Comparison.tsx     # Before/after comparison section
-│   │   └── FAQ.tsx            # Frequently asked questions section
-│   └── ui/                    # Atomic UI components
-│       ├── Card.tsx           # Card component for features
-│       ├── Button.tsx         # CTA buttons
-│       └── Collapsible.tsx    # Collapsible component for FAQ
-├── theme/                     # Theme configuration
-└── utils/                     # Utility functions
+├── packages/                  # Shared internal packages
+│   ├── constants/             # Shared constants and enums
+│   ├── types/                 # Shared TypeScript definitions
+│   └── ui/                    # Shared UI components
+├── landing-page/              # Next.js landing page (this project)
+│   ├── src/                   # Source code
+│   │   ├── app/                       # Next.js app directory
+│   │   │   ├── page.tsx               # Main landing page
+│   │   │   ├── layout.tsx             # Root layout component
+│   │   │   └── about/                 # About page 
+│   │   ├── components/                # Reusable UI components
+│   │   │   ├── layout/                # Layout components 
+│   │   │   │   ├── Header.tsx         # Site header with navigation
+│   │   │   │   └── Footer.tsx         # Site footer
+│   │   │   ├── sections/              # Major page sections
+│   │   │   │   ├── Hero.tsx           # Hero banner section
+│   │   │   │   ├── Features.tsx       # Features highlight section
+│   │   │   │   ├── BrowserSupport.tsx # Browser compatibility section
+│   │   │   │   ├── Comparison.tsx     # Before/after comparison section
+│   │   │   │   └── FAQ.tsx            # Frequently asked questions section
+│   │   │   └── ui/                    # Atomic UI components
+│   │   │       ├── Card.tsx           # Card component for features
+│   │   │       ├── Button.tsx         # CTA buttons
+│   │   │       └── Collapsible.tsx    # Collapsible component for FAQ
+│   │   ├── theme/                     # Theme configuration
+│   │   └── utils/                     # Utility functions
+│   └── docs/                  # Project documentation
+├── extension/                 # WXT browser extension project
+│   ├── src/                   # Source code
+│   └── docs/                  # Project documentation
+└── package.json               # Monorepo configuration
+```

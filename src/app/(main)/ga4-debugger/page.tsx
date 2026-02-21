@@ -8,7 +8,7 @@ import Divider from '@mui/material/Divider';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { softwareApplicationSchema, organizationSchema } from '@/utils/schemas';
-import { EXTENSION_URLS } from '@/global/constants';
+import { EXTENSION_URLS } from '@zen-analytics/constants';
 
 export const metadata: Metadata = {
   title: 'GA4 Debugger Chrome Extension — Debug Google Analytics 4 Events in Real Time',
