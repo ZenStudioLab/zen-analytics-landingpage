@@ -7,7 +7,6 @@ import Button from '@mui/material/Button';
 import Divider from '@mui/material/Divider';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
-import { softwareApplicationSchema, organizationSchema } from '@/utils/schemas';
 import { EXTENSION_URLS } from '@zen-analytics/constants';
 
 export const metadata: Metadata = {
@@ -58,14 +57,6 @@ export default function GA4DebuggerPage() {
     <Box sx={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
-      />
-      <script
-        type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
@@ -111,7 +102,7 @@ export default function GA4DebuggerPage() {
               <Button
                 variant="outlined"
                 size="large"
-                href="/"
+                href="/#features"
                 sx={{ px: 4, py: 1.5, fontWeight: 600, borderRadius: '28px' }}
               >
                 See All Features
