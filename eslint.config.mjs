@@ -1,15 +1,8 @@
-import globals from "globals";
-import pluginJs from "@eslint/js";
-import tseslint from "typescript-eslint";
-import pluginReact from "eslint-plugin-react";
+import sharedConfig from "@zen-analytics/config/eslint/eslint-preset.js";
 import nextPlugin from "@next/eslint-plugin-next";
 
 export default [
-    { files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"] },
-    { languageOptions: { globals: globals.browser } },
-    pluginJs.configs.recommended,
-    ...tseslint.configs.recommended,
-    pluginReact.configs.flat.recommended,
+    ...sharedConfig,
     {
         plugins: {
             "@next/next": nextPlugin,
@@ -17,10 +10,7 @@ export default [
         rules: {
             ...nextPlugin.configs.recommended.rules,
             ...nextPlugin.configs["core-web-vitals"].rules,
-            "react/react-in-jsx-scope": "off",
-            "react/prop-types": "off",
-            "@typescript-eslint/no-explicit-any": "warn",
-            "@typescript-eslint/no-unused-vars": "warn",
+            // Additional overrides
             "no-var": "off",
             "prefer-rest-params": "off",
             "prefer-spread": "off",
