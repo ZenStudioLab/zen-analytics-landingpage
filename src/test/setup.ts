@@ -41,3 +41,12 @@ vi.mock('next/navigation', () => ({
     usePathname: vi.fn(() => ''),
     useSearchParams: vi.fn(() => new URLSearchParams()),
 }));
+
+// Mock next/font/google
+vi.mock('next/font/google', () => ({
+    Plus_Jakarta_Sans: () => ({
+        style: {
+            fontFamily: 'mock-font',
+        },
+    }),
+}));
