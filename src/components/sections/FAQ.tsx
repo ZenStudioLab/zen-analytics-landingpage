@@ -20,6 +20,7 @@ export default function FAQ() {
   return (
     <Box
       id="faq"
+      data-testid="faq-section"
       sx={{
         py: 8,
         bgcolor: 'background.paper',
@@ -47,6 +48,7 @@ export default function FAQ() {
               key={index}
               expanded={expanded === `panel${index}`}
               onChange={handleChange(`panel${index}`)}
+              data-testid={`faq-item-${index}`}
               sx={{
                 mb: 2,
                 boxShadow: 'none',

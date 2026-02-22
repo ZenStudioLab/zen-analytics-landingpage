@@ -78,6 +78,7 @@ export default function Hero() {
                 variant="h2"
                 color="text.primary"
                 gutterBottom
+                data-testid="hero-title"
                 sx={{
                   fontWeight: 700,
                   fontSize: { xs: '2.5rem', md: '3.5rem' },
@@ -103,6 +104,7 @@ export default function Hero() {
                 <Button
                   variant="contained"
                   size="large"
+                  data-testid="hero-cta-button"
                   sx={{
                     px: 4,
                     py: 1.5,

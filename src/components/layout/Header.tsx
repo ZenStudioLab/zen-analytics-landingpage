@@ -84,6 +84,7 @@ export default function Header() {
                 component="img"
                 src="/images/128.svg"
                 alt="Zen Analytics Logo"
+                data-testid="nav-logo"
                 sx={{
                   height: 40,
                   mr: 1.5,
@@ -166,6 +167,7 @@ export default function Header() {
                   key={item.name}
                   component={Link}
                   href={item.href}
+                  data-testid={`nav-link-${item.name.toLowerCase()}`}
                   sx={{
                     mx: 1.5,
                     color: 'text.primary',
@@ -208,6 +210,7 @@ export default function Header() {
                 <Button
                   variant="contained"
                   color="primary"
+                  data-testid="nav-button-install"
                   href={addUtmParams(EXTENSION_URLS.CHROME, {
                     source: 'zen_analytics_landing_page',
                     campaign: 'eternal',
