@@ -4,20 +4,20 @@ import { useEffect } from 'react';
 
 // Type definition for the Meta Pixel (optional, but recommended)
 interface Fbq {
-    (action: 'init', pixelId: string): void;
-    (action: 'track', eventName: string, data?: object): void;
-    queue: any[];
-    callMethod?: (...args: any[]) => void;
-    push: (...args: any[]) => void;
-    loaded: boolean;
-    version: string;
+  (action: 'init', pixelId: string): void;
+  (action: 'track', eventName: string, data?: object): void;
+  queue: any[];
+  callMethod?: (...args: any[]) => void;
+  push: (...args: any[]) => void;
+  loaded: boolean;
+  version: string;
 }
 declare global {
-    interface Window {
-      fbq?: Fbq;
-      _fbq?: Fbq;
-    }
+  interface Window {
+    fbq?: Fbq;
+    _fbq?: Fbq;
   }
+}
 
 const FacebookPixel = () => {
   useEffect(() => {
@@ -28,25 +28,27 @@ const FacebookPixel = () => {
 
     if (!window.fbq) {
       (function (
-        f: Window & typeof globalThis, 
-        b: Document, 
-        e: string, 
+        f: Window & typeof globalThis,
+        b: Document,
+        e: string,
         v: string
       ) {
         if (f.fbq) return;
         const n = f.fbq = function () {
           n.callMethod
-            ? n.callMethod.apply(n, arguments)
+            ? (n as any).callMethod.apply(n, arguments)
             : n.queue.push(arguments);
-        };
+        } as unknown as Fbq;
         if (!f._fbq) f._fbq = n;
-        n.push = n;
+        n.push = n as any;
         n.loaded = true;
         n.version = '2.0';
         n.queue = [];
-        const t = b.createElement(e);
+
+        const t = b.createElement(e) as HTMLScriptElement;
         t.async = true;
         t.src = v;
+
         const s = b.getElementsByTagName(e)[0];
         if (s && s.parentNode) {
           s.parentNode.insertBefore(t, s);

@@ -1,12 +1,12 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { 
-  Container, 
-  Typography, 
-  Box, 
-  useTheme, 
-  IconButton, 
+import {
+  Container,
+  Typography,
+  Box,
+  useTheme,
+  IconButton,
   useMediaQuery,
   Modal,
   Fade,
@@ -49,7 +49,7 @@ const carouselItems = [
     title: 'Site tracking exclusion',
     description: 'Exclude specific sites from being tracked to ensure privacy and data security.',
     image: '/images/carousel/webp/5.webp',
-  },  
+  },
 ];
 
 const Carousel: React.FC = () => {
@@ -58,30 +58,32 @@ const Carousel: React.FC = () => {
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const [zoomedImage, setZoomedImage] = useState<string | null>(null);
   const [zoomedImageIndex, setZoomedImageIndex] = useState<number>(0);
-  const transitionEffect = 'translate'; // Always use slide effect
-  
+  const transitionEffect = 'translate' as 'translate' | 'fade'; // Always use slide effect
+
+
+
   // Responsive settings
   const isDesktop = useMediaQuery(theme.breakpoints.up('md'));
   const isTablet = useMediaQuery(theme.breakpoints.up('sm'));
-  
+
   // Number of items to show based on screen size
   const itemsToShow = isDesktop ? 3 : isTablet ? 2 : 1;
-  
+
   // Calculate the maximum index based on items to show
   const maxIndex = carouselItems.length - itemsToShow;
 
   // Auto-advance the carousel
   useEffect(() => {
     let interval: NodeJS.Timeout;
-    
+
     if (isAutoPlaying) {
       interval = setInterval(() => {
-        setActiveIndex((prevIndex) => 
+        setActiveIndex((prevIndex) =>
           prevIndex >= maxIndex ? 0 : prevIndex + 1
         );
       }, 5000);
     }
-    
+
     return () => clearInterval(interval);
   }, [isAutoPlaying, maxIndex]);
 
@@ -90,13 +92,13 @@ const Carousel: React.FC = () => {
   const handleMouseLeave = () => setIsAutoPlaying(true);
 
   const handlePrev = () => {
-    setActiveIndex((prevIndex) => 
+    setActiveIndex((prevIndex) =>
       prevIndex === 0 ? maxIndex : prevIndex - 1
     );
   };
 
   const handleNext = () => {
-    setActiveIndex((prevIndex) => 
+    setActiveIndex((prevIndex) =>
       prevIndex >= maxIndex ? 0 : prevIndex + 1
     );
   };
@@ -106,30 +108,30 @@ const Carousel: React.FC = () => {
       setActiveIndex(index);
     }
   };
-  
+
   // Image zoom handling
   const handleImageClick = (imageUrl: string, index: number) => {
     setZoomedImage(imageUrl);
     setZoomedImageIndex(index);
     setIsAutoPlaying(false);
   };
-  
+
   const handleCloseZoom = () => {
     setZoomedImage(null);
     setIsAutoPlaying(true);
   };
-  
+
   const handleZoomedPrev = (e: React.MouseEvent) => {
     e.stopPropagation();
-    setZoomedImageIndex((prevIndex) => 
+    setZoomedImageIndex((prevIndex) =>
       prevIndex === 0 ? carouselItems.length - 1 : prevIndex - 1
     );
     setZoomedImage(carouselItems[zoomedImageIndex === 0 ? carouselItems.length - 1 : zoomedImageIndex - 1].image);
   };
-  
+
   const handleZoomedNext = (e: React.MouseEvent) => {
     e.stopPropagation();
-    setZoomedImageIndex((prevIndex) => 
+    setZoomedImageIndex((prevIndex) =>
       prevIndex === carouselItems.length - 1 ? 0 : prevIndex + 1
     );
     setZoomedImage(carouselItems[zoomedImageIndex === carouselItems.length - 1 ? 0 : zoomedImageIndex + 1].image);
@@ -153,7 +155,7 @@ const Carousel: React.FC = () => {
         >
           Analytics in Action
         </Typography>
-        
+
         <Box
           sx={{
             position: 'relative',
@@ -174,9 +176,10 @@ const Carousel: React.FC = () => {
             }}
           >
             {carouselItems.map((item, index) => (
-              <Fade 
-                key={item.id} 
-                in={transitionEffect === 'fade' ? index >= activeIndex && index < activeIndex + itemsToShow : true}
+              <Fade
+                key={item.id}
+                in={transitionEffect === 'fade' ? (index >= activeIndex && index < activeIndex + itemsToShow) : true}
+
                 timeout={500}
               >
                 <Box
@@ -227,7 +230,7 @@ const Carousel: React.FC = () => {
                         transition: 'filter 0.3s ease',
                       }}
                     />
-                    
+
                     {/* Zoom Icon Overlay */}
                     <Box
                       className="zoom-icon"
@@ -250,7 +253,7 @@ const Carousel: React.FC = () => {
                     >
                       <ZoomInIcon sx={{ color: theme.palette.text.primary }} />
                     </Box>
-                    
+
                     {/* Content overlay - temporarily hidden */}
                     {false && (
                       <Box
@@ -264,18 +267,18 @@ const Carousel: React.FC = () => {
                           color: 'white',
                         }}
                       >
-                        <Typography 
-                          variant="h6" 
-                          component="h3" 
-                          sx={{ 
-                            mb: 0.5, 
+                        <Typography
+                          variant="h6"
+                          component="h3"
+                          sx={{
+                            mb: 0.5,
                             fontWeight: 600,
                             fontSize: { xs: '0.9rem', sm: '1.1rem', md: '1.25rem' }
                           }}
                         >
                           {item.title}
                         </Typography>
-                        <Typography 
+                        <Typography
                           variant="body2"
                           sx={{
                             display: { xs: 'none', sm: 'block' },
@@ -291,7 +294,7 @@ const Carousel: React.FC = () => {
               </Fade>
             ))}
           </Box>
-          
+
           {/* Navigation buttons */}
           <IconButton
             onClick={handlePrev}
@@ -310,7 +313,7 @@ const Carousel: React.FC = () => {
           >
             <KeyboardArrowLeftIcon />
           </IconButton>
-          
+
           <IconButton
             onClick={handleNext}
             sx={{
@@ -328,7 +331,7 @@ const Carousel: React.FC = () => {
           >
             <KeyboardArrowRightIcon />
           </IconButton>
-          
+
           {/* Dots navigation */}
           <Box
             sx={{
@@ -358,7 +361,7 @@ const Carousel: React.FC = () => {
             ))}
           </Box>
         </Box>
-        
+
         {/* Image Zoom Modal */}
         <Modal
           open={zoomedImage !== null}
@@ -375,7 +378,7 @@ const Carousel: React.FC = () => {
           }}
         >
           <Fade in={zoomedImage !== null}>
-            <Box 
+            <Box
               onClick={handleCloseZoom}
               sx={{
                 position: 'relative',
@@ -410,7 +413,7 @@ const Carousel: React.FC = () => {
               >
                 <CloseIcon />
               </IconButton>
-              
+
               {/* Navigation buttons */}
               <IconButton
                 onClick={handleZoomedPrev}
@@ -428,7 +431,7 @@ const Carousel: React.FC = () => {
               >
                 <KeyboardArrowLeftIcon />
               </IconButton>
-              
+
               <IconButton
                 onClick={handleZoomedNext}
                 sx={{
@@ -445,7 +448,7 @@ const Carousel: React.FC = () => {
               >
                 <KeyboardArrowRightIcon />
               </IconButton>
-              
+
               {/* Zoomed image */}
               {zoomedImage && (
                 <img
@@ -462,7 +465,7 @@ const Carousel: React.FC = () => {
                   }}
                 />
               )}
-              
+
               {/* Image counter */}
               <Box
                 sx={{
