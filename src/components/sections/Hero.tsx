@@ -85,16 +85,6 @@ export default function Hero() {
                 }}
               >
                 All-in-one analytics tool
-                <Box
-                  component="span"
-                  sx={{
-                    color: 'primary.main',
-                    display: 'block',
-                    position: 'relative'
-                  }}
-                >
-                  Zen Analytics Pixel Tracker
-                </Box>
               </Typography>
               <Typography
                 variant="h5"

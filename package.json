@@ -8,6 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint src",
+    "type-check": "tsc --noEmit",
     "post-update": "echo \"codesandbox preview only, need an update\" && pnpm update --latest"
   },
   "dependencies": {
@@ -20,6 +21,7 @@
     "@zen-analytics/constants": "*",
     "@zen-analytics/types": "*",
     "@zen-analytics/ui": "*",
+    "@zen-analytics/utils": "*",
     "mixpanel-browser": "^2.72.0",
     "next": "16.1.6",
     "react": "^19.0.0",

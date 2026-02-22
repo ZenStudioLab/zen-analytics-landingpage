@@ -76,7 +76,7 @@ export default function Header() {
                 color: 'primary.main',
                 display: 'flex',
                 alignItems: 'center',
-                fontSize: { xs: '1.15rem', md: '1.3rem' },
+                fontSize: { xs: '1.3rem', md: '1.5rem' },
                 letterSpacing: '-0.5px',
               }}
             >
@@ -94,7 +94,7 @@ export default function Header() {
                   }
                 }}
               />
-              Zen Analytics
+              Zen Analytics Pixel Tracker
             </Typography>
 
             {/* Mobile menu */}
