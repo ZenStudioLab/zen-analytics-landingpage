@@ -15,6 +15,7 @@ export default defineConfig({
     { name: 'chromium', use: { ...devices['Desktop Chrome'] } },
     { name: 'webkit', use: { ...devices['Desktop Safari'] } },
     { name: 'Mobile Safari', use: { ...devices['iPhone 12'] } },
+    { name: 'Mobile Chrome', use: { ...devices['Pixel 5'] } },
   ],
   webServer: {
     command: 'yarn build && yarn start',
