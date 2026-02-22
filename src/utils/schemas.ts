@@ -113,3 +113,16 @@ export const personSchema = {
     "https://www.reddit.com/user/Prior-Switch-9099/"
   ]
 };
+
+export const getBreadcrumbSchema = (items: { name: string; item: string }[]) => {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": items.map((item, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "name": item.name,
+      "item": `${SITE_URL}${item.item}`
+    }))
+  };
+};

@@ -7,6 +7,7 @@ import Button from '@mui/material/Button';
 import Divider from '@mui/material/Divider';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
+import { getBreadcrumbSchema } from '@/utils/schemas';
 import { EXTENSION_URLS } from '@zen-analytics/constants';
 
 export const metadata: Metadata = {
@@ -21,6 +22,14 @@ export const metadata: Metadata = {
     url: 'https://zenanalytics.online/ga4-debugger',
     siteName: 'Zen Analytics',
     type: 'website',
+    images: [
+      {
+        url: 'https://zenanalytics.online/images/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Zen Analytics GA4 Debugger'
+      }
+    ]
   },
   twitter: {
     card: 'summary_large_image',
@@ -55,6 +64,15 @@ const ga4FaqItems = [
 export default function GA4DebuggerPage() {
   return (
     <Box sx={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(getBreadcrumbSchema([
+            { name: "Home", item: "/" },
+            { name: "GA4 Debugger", item: "/ga4-debugger" }
+          ]))
+        }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

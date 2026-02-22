@@ -8,10 +8,20 @@ import Button from '@mui/material/Button';
 import NextLink from 'next/link';
 import Copyright from '@/components/Copyright';
 import { Paper, Divider } from '@mui/material';
+import { getBreadcrumbSchema } from '@/utils/schemas';
 
 export default function PrivacyPolicy() {
   return (
     <Container maxWidth="lg">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(getBreadcrumbSchema([
+            { name: "Home", item: "/" },
+            { name: "Privacy Policy", item: "/privacy-policy" }
+          ]))
+        }}
+      />
       <Box
         sx={{
           my: 4,

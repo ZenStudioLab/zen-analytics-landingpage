@@ -7,6 +7,7 @@ import Button from '@mui/material/Button';
 import Divider from '@mui/material/Divider';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
+import { getBreadcrumbSchema } from '@/utils/schemas';
 import { EXTENSION_URLS } from '@zen-analytics/constants';
 
 export const metadata: Metadata = {
@@ -21,11 +22,25 @@ export const metadata: Metadata = {
     url: 'https://zenanalytics.online/gtm-debugger',
     siteName: 'Zen Analytics',
     type: 'website',
+    images: [
+      {
+        url: 'https://zenanalytics.online/images/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Zen Analytics GTM Debugger'
+      }
+    ]
   },
   twitter: {
     card: 'summary_large_image',
     title: 'GTM Debugger Chrome Extension — Zen Analytics',
     description: 'Debug Google Tag Manager events and dataLayer in real time. Free, 5-star rated Chrome extension.',
+    images: [
+      {
+        url: 'https://zenanalytics.online/images/og-image.png',
+        alt: 'Zen Analytics GTM Debugger'
+      }
+    ]
   },
 };
 
@@ -55,6 +70,15 @@ const gtmFaqItems = [
 export default function GTMDebuggerPage() {
   return (
     <Box sx={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(getBreadcrumbSchema([
+            { name: "Home", item: "/" },
+            { name: "GTM Debugger", item: "/gtm-debugger" }
+          ]))
+        }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
