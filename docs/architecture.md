@@ -31,10 +31,19 @@ The project utilizes shared internal packages to ensure consistency and enable c
 - **BrowserIcon** - Visual indicators for browser compatibility
 
 ## Technical Architecture
-- **Next.js Pages** - For routing and server-side rendering
-- **Material UI** - For component styling and theming
-- **React Hooks** - For state management within components
-- **Responsive Design** - For mobile-friendly layout
+- **Next.js App Router** — Server-side rendering with colocation of layouts and pages.
+- **Material UI (MUI)** — Base component library, overridden by a custom **Ethereal Technical** theme (`src/theme.ts`): Obsidian backgrounds, Neon Green accents, Space Grotesk / Space Mono typography.
+- **React Hooks** — For state management within components
+- **JSON-LD Schemas** — Page-specific structured data (FAQPage, SoftwareApplication) for SEO; injected per-page rather than globally to prevent duplicate schema errors.
+- **Responsive Design** — For mobile-friendly layout
+
+## Decision History
+Significant technical decisions are documented as Architecture Decision Records (ADRs) to capture context and rationale.
+
+See the [Landing Page ADR Index](adr/README.md) for the full list of decisions.
+
+- [ADR-0001: "Ethereal Technical" Design Aesthetic](adr/0001-ui-aesthetic-standard.md)
+- [ADR-0002: Consolidated SEO FAQ Schema Placement](adr/0002-seo-faq-placement.md)
 
 ## Directory Structure
 ```
