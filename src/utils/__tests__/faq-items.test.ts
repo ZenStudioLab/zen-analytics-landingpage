@@ -1,3 +1,13 @@
+/**
+ * Test Perspective Table: FAQ Items
+ *
+ * | Case ID | Input / Precondition            | Perspective | Expected Result                                      | Notes |
+ * |---------|---------------------------------|-------------|------------------------------------------------------|-------|
+ * | TC-N-01 | faqItems array check            | Normal      | Returns a non-empty array of objects                 |       |
+ * | TC-N-02 | FAQ property validation         | Normal      | Each item has a valid question and answer string     |       |
+ * | TC-N-03 | Content coverage (GA4, GTM, etc.)| Normal      | Includes key topics like GA4, GTM, privacy, and more |       |
+ */
+
 import { describe, it, expect } from 'vitest';
 import { faqItems } from '../faq-items';
 

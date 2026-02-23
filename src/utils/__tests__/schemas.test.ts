@@ -1,3 +1,15 @@
+/**
+ * Test Perspective Table: SEO Schemas
+ *
+ * | Case ID | Input / Precondition            | Perspective | Expected Result                                      | Notes |
+ * |---------|---------------------------------|-------------|------------------------------------------------------|-------|
+ * | TC-N-01 | softwareApplicationSchema        | Normal      | Valid SoftwareApplication JSON-LD schema generated   |       |
+ * | TC-N-02 | faqSchema                        | Normal      | Valid FAQPage JSON-LD schema generated               |       |
+ * | TC-N-03 | organizationSchema               | Normal      | Valid Organization JSON-LD schema generated          |       |
+ * | TC-N-04 | personSchema                     | Normal      | Valid Person JSON-LD schema generated                 |       |
+ * | TC-N-05 | getBreadcrumbSchema with 2 items | Normal      | Valid BreadcrumbList JSON-LD schema with full URLs   |       |
+ */
+
 import { describe, it, expect } from 'vitest';
 import { softwareApplicationSchema, faqSchema, organizationSchema, personSchema, getBreadcrumbSchema } from '../schemas';
 

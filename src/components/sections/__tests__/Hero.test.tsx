@@ -1,3 +1,13 @@
+/**
+ * Test Perspective Table: Hero Component
+ *
+ * | Case ID | Input / Precondition            | Perspective | Expected Result                                      | Notes |
+ * |---------|---------------------------------|-------------|------------------------------------------------------|-------|
+ * | TC-N-01 | Default Hero render            | Normal      | Displays the primary hero title 'All-in-one'         |       |
+ * | TC-N-02 | Install button render          | Normal      | Displays the 'Install Now' CTA button                |       |
+ * | TC-N-03 | Social proof check             | Normal      | Shows Chrome Web Store rating and install count      |       |
+ */
+
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect, vi } from 'vitest';
 import Hero from '../Hero';

@@ -1,3 +1,13 @@
+/**
+ * Test Perspective Table: Header Component
+ *
+ * | Case ID | Input / Precondition            | Perspective | Expected Result                                      | Notes |
+ * |---------|---------------------------------|-------------|------------------------------------------------------|-------|
+ * | TC-N-01 | Default Header render           | Normal      | Displays the logo text 'Zen Analytics Pixel Tracker' |       |
+ * | TC-N-02 | Header render on desktop        | Normal      | Nav links (e.g., 'Features') are accessible          |       |
+ * | TC-N-03 | Install button presence         | Normal      | Shows 'Get Extension' button in the header           |       |
+ */
+
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect, vi } from 'vitest';
 import Header from '../Header';
