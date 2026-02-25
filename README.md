@@ -1,6 +1,6 @@
 # Zen Analytics: Unified Analytics & Ad Tracker Inspector
 
-This repository contains the source code for the landing page of Zen Analytics, a Chrome extension that aggregates data from 20+ trackers into a unified interface within your browser. Note that this is not the extension itself, but rather the promotional [website](https://zap-pixel.web.app/) for it.
+This repository contains the source code for the landing page of Zen Analytics, a Chrome extension that aggregates data from 20+ trackers into a unified interface within your browser. Note that this is not the extension itself, but rather the promotional [website](https://zenanalytics.online) for it.
 
 ## Product Description
 
@@ -18,7 +18,7 @@ This repository contains the source code for the landing page of Zen Analytics, 
 
 ## Links
 
-- **Homepage**: [https://zap-pixel.web.app/](https://zap-pixel.web.app/)
+- **Homepage**: [https://zenanalytics.online](https://zenanalytics.online)
 - **Chrome Web Store**: [Zen Analytics Pixel Tracker](https://chromewebstore.google.com/detail/zen-analytics-pixel-track/gknigcbhlammoakmmdddkblknanpjiac?utm_source=github_zen_analytics_landing_page&utm_medium=readme&utm_campaign=eternal)
 
 ## Development

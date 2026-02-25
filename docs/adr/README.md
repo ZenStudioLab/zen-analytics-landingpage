@@ -6,8 +6,8 @@ This directory contains ADRs specific to the marketing and documentation landing
 
 | ADR | Title | Status | Date |
 | --- | --- | --- | --- |
-| [0001](0001-ui-aesthetic-standard.md) | "Ethereal Technical" Design Aesthetic | Accepted | 2026-02-22 |
-| [0002](0002-seo-faq-placement.md) | Consolidated SEO FAQ Schema Placement | Accepted | 2026-02-22 |
+| [0001](0001-seo-faq-placement.md) | Consolidated SEO FAQ Schema Placement | Accepted | 2026-02-22 |
+| [0003](0003-mixpanel-server-side-dual-tracking.md) | Mixpanel Server-Side Tracking Proxy (Concierge) | Accepted | 2026-02-25 |
 
 ## Creating a New ADR
 

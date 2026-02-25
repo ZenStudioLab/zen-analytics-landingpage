@@ -4,10 +4,10 @@
 
 ## Core Resources
 
-- [Homepage](https://zap-pixel.web.app/): Official landing page and overview.
+- [Homepage](https://zenanalytics.online): Official landing page and overview.
 - [Install Extension](https://chromewebstore.google.com/detail/zen-analytics-pixel-track/gknigcbhlammoakmmdddkblknanpjiac): Direct link to install from Chrome Web Store.
-- [About Us](https://zap-pixel.web.app/about): Project background and team information.
-- [Privacy Policy](https://zap-pixel.web.app/privacy-policy): Privacy practices and data handling information.
+- [About Us](https://zenanalytics.online/about): Project background and team information.
+- [Privacy Policy](https://zenanalytics.online/privacy-policy): Privacy practices and data handling information.
 
 ## Critical Information
 

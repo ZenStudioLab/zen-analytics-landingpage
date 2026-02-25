@@ -155,7 +155,7 @@ export default function PrivacyPolicy() {
             Specific Data Collection (via Mixpanel)
           </Typography>
           <Typography paragraph>
-            To provide and improve our Service, we specifically collect the following types of data using Mixpanel:
+            To provide and improve our Service, we collect data using Mixpanel through both client-side tracking (browser-based) and server-side processing (relayed via our secure servers to enhance data accuracy and security). We specifically collect the following:
           </Typography>
 
           <Typography variant="subtitle2" sx={{ mb: 1, fontWeight: 'bold' }}>
