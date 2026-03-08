@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 import Stack from '@mui/material/Stack';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import { GITHUB_PROFILE_URL } from '@zen-analytics/constants';
 import Copyright from '../Copyright';
 import { useTheme, Divider, IconButton, Grid, Fade } from '@mui/material';
 
@@ -96,7 +97,7 @@ export default function Footer() {
               <Stack direction="row" spacing={1} sx={{ mb: 2 }}>
                 <IconButton 
                   component={Link}
-                  href="https://github.com/zenzjtech"
+                  href={GITHUB_PROFILE_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="GitHub"
