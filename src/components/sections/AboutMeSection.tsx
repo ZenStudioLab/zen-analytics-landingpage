@@ -4,6 +4,7 @@ import React from 'react';
 import { Box, Grid, IconButton, Typography, Tooltip } from '@mui/material';
 import { alpha } from '@mui/material/styles';
 import { WorkOutline as WorkIcon } from '@mui/icons-material';
+import { GITHUB_PROFILE_URL } from '@zen-analytics/constants';
 
 const AboutMeSection: React.FC = () => {
   // Hardcoded content since i18n is not set up
@@ -89,7 +90,7 @@ const AboutMeSection: React.FC = () => {
             >
               <IconButton
                 component="a"
-                href="https://github.com/zenzjtech"
+                href={GITHUB_PROFILE_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub Profile"

@@ -17,6 +17,7 @@ import {
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import CloseIcon from '@mui/icons-material/Close';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+import { GITHUB_ISSUES_URL } from '@zen-analytics/constants';
 
 // Define vendor icon paths
 const gmailIconPath = '/images/vendors/icons8-gmail.svg';
@@ -66,7 +67,7 @@ const SupportFab: React.FC = () => {
       id: 'github',
       label: 'Report Bug on GitHub',
       icon: <Box component="img" src={githubIconPath} alt="GitHub" sx={{ width: 24, height: 24 }} />,
-      action: () => openExternalLink('https://github.com/zenzjtech/zen-analytics-landingpage/issues/'),
+      action: () => openExternalLink(GITHUB_ISSUES_URL),
       tooltip: 'Report issues on GitHub'
     },
     {
